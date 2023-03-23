@@ -23,10 +23,23 @@ const album = [
     }
 ];
 
-//take carousel div from dom
-const carousel = document.getElementById('carouselExampleControls')
-console.log(carousel);
+//funzione per stampare in dom
+function printToDOM(id, text) {
+    document.querySelector(id).innerHTML += text
+}
 
 //creo l'array delle immagini
-const images = album.map(image => image.image);
+const images = album.map(pic => pic.image);
 console.log(images);
+
+//immagini che vogliamo inserire nella dom
+let i = 0
+while (i < images.length) {
+    const carouselImage = `
+    <div class="carousel-inner">
+        <img src="./assets/${images[i]}" class="d-block w-100" alt="">
+    </div>
+    `
+    printToDOM('#carousel', carouselImage)
+    i++
+}
