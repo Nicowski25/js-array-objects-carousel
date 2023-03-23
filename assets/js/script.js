@@ -1,4 +1,5 @@
-const images = [
+//creo l'array delle immagini
+const album = [
     {
         image: 'img/01.webp',
         title: 'Marvel\'s Spiderman Miles Morale',
@@ -21,3 +22,11 @@ const images = [
         text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
     }
 ];
+
+//take carousel div from dom
+const carousel = document.getElementById('carouselExampleControls')
+console.log(carousel);
+
+//creo l'array delle immagini
+const images = album.map(image => image.image);
+console.log(images);
