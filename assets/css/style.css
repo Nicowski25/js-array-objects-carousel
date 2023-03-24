@@ -6,4 +6,5 @@
 
 #carousel > img {
     display: none;
+    padding: 4rem;
 }
